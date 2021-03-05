@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class q1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+//String s="welcome";
+        System.out.println(s);
+        int m = s.length() / 2;
+        int j = 0;
+        int k = 0;
+        for (int i = m; (i + j) < s.length(); i = i) {
+            StringBuilder sb = new StringBuilder();
+            int end = i + j;
+            int v = 0;
+            System.out.print(m + " " + end);
+            for (k = 0; k < s.length() - 1; k++) {
+                System.out.print(" ");
+                sb.append(" ");
+            }
+
+            System.out.println(s.substring(i, end + 1));
+            sb.append(s.substring(i, end + 1));
+
+
+            j++;
+            k--;
+
+
+        }
+
+        int x = 0;
+        for (int i = m; (i + x) > 10; i++) {
+            int end = i + x;
+            System.out.print(m + " " + end);
+
+            System.out.print(s.substring(i, end + 1));
+            System.out.println(s.substring(0, end));
+            //sb.append(s.substring(i,end+1));
+            j++;
+            k--;
+        }
+
+    }
+}
